@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/vendor/jquery-ui.1.12.1.min.css">
     <link rel="stylesheet" href="css/vendor/pivot.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.13.0/pivot.min.css"> -->
+    <link rel="stylesheet" href="css/vendor/wizard.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <link rel="shortcut icon" href="favicon.ico">
@@ -33,12 +34,6 @@
             </div>
         </section>
 
-        <div id="image">
-            <div class="row justify-content-md-center">
-                <img src="images/poker-table.svg" width="500px" alt="Poker Table" />
-            </div>
-        </div>
-
         <br />
 
         <div ng-controller="controller">
@@ -46,46 +41,60 @@
 
                 <div class="row">
                     <div class="col">
-                        <p>How many players?</p>
+
+                        <!-- Begin wizard -->
+                        <div class="wizard" id="wizard">
+                        
+                            <!-- Step One -->
+                            <div class="wizard-step" data-title="Step One">
+                                <p>How many players?</p>
+                                <input type="number" value="3" />
+                                <div id="image">
+                                    <div class="row justify-content-md-center">
+                                        <img id="pokerTable" src="images/poker-table.svg" width="500px" alt="Poker Table" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Step Two -->
+                            <div class="wizard-step" data-title="Step Two">
+                                <p>Who is playing?</p>
+                                <input type="text" value="Alex" />
+                            </div>
+                            
+                            <!-- Step Three -->
+                            <div class="wizard-step" data-title="Step Three">
+                                <p>Chips</p>
+                            </div>
+
+                            <!-- Step Four -->
+                            <div class="wizard-step" data-title="Step Four">
+                                <p>How long?</p>
+                            </div>
+
+                            <!-- Step Five -->
+                            <div class="wizard-step" data-title="Step Five">
+                                <p>Buy In?</p>
+                            </div>
+
+                            <!-- Step Six -->
+                            <div class="wizard-step" data-title="Step Six">
+                                <p>Summary</p>
+                            </div>
+
+                            <!-- Step Seven -->
+                            <div class="wizard-step" data-title="Step Seven">
+                                <p>Game (add timer etc)</p>
+                            </div>
+
+                        </div>
+
+                        <!-- End wizard -->
+                        <div id="EventLog"></div>
+
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col">
-                        <p>Who is playing?</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <p>Chips</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <p>How long?</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <p>Buy In?</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <p>Summary</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <p>Game (add timer etc)</p>
-                    </div>
-                </div>
-                
             </div>
         </div>
 
@@ -104,6 +113,7 @@
     <script src="js/vendor/jquery-ui.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/wizard.min.js"></script>
     <script src="js/app.js"></script>
     </body>
 </html>

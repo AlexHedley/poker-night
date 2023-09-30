@@ -1,0 +1,22 @@
+/* bootstrap-wizard @jeffreypolk */
+/* https://github.com/jeffreypolk/bootstrap-wizard/blob/master/wizard.css */
+/* https://raw.githubusercontent.com/jeffreypolk/bootstrap-wizard/master/wizard.css */
+
+.wizard {
+    display:none;
+}
+.wizard-ok {
+    display:none;
+}
+.wizard-nomodal {
+    box-shadow:none;
+    border:none;
+}
+
+.wizard .modal-header {
+    background-color:#f8f8f8;
+}
+
+.wizard-body {
+    overflow:hidden;
+}
